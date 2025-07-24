@@ -1,6 +1,8 @@
 package com.example.student_menagment.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "students")
@@ -10,10 +12,14 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "Name is required")
     private String name;
 
+    @Email(message = "Invalid email format")
+    @NotBlank(message = "Email is required")
     private String email;
 
+    @NotBlank(message = "Course is required")
     private String course;
 
 
