@@ -1,0 +1,28 @@
+### Get students
+GET http://localhost:8080/api/students
+
+### Add student
+POST http://localhost:8080/api/students
+Content-Type: application/json
+
+{
+  "name": "Rinor",
+  "email": "Rinor@gmail.com",
+  "course": "CS1"
+}
+
+### Get student by ID
+GET http://localhost:8080/api/students/1
+
+### Update student
+PUT http://localhost:8080/api/students/1
+Content-Type: application/json
+
+{
+  "name": "Rinor Updated",
+  "email": "rinor_updated@gmail.com",
+  "course": "Math"
+}
+
+### Delete student
+DELETE http://localhost:8080/api/students/1
